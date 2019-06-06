@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RecyclerViewHomework</string>
+
+    <string name="detail_1">detail_1</string>
+    <string name="detail_2">detail_2</string>
+    <string name="detail_3">detail_3</string>
+    <string name="detail_4">detail_4</string>
+    <string name="detail_5">detail_5</string>
+
+</resources>

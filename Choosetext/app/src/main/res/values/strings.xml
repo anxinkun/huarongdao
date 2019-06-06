@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Choosetext</string>
+    <string name="text1">TensorFlow是谷歌的第二代开源的人工智能学习系统，是用来实现神经网络的内置框架学习软件库。目前，TensorFlow机器学习已经成为了一个研究热点. TensorFlow是一个编程系统，使用图来表示计算任务。图中的节点被称之为op(operation的缩写)。一个op获得 0个或多个Tensor，执行计算，产生0个或多个Tensor。每个Tensor是一个类型化的多维数组。例如，你可以将一小组图像集表示为一个四维浮点数数组，这四个维度分别是[batch， height，width，channels]。一个TensorFlow图描述了计算的过程。为了进行计算，图必须在会话里被启动。会话将图的op分发到诸如CPU或GPU之类的设备上，同时提供执行op 的方法。这些方法执行后, 将产生的tensor返回。在Python语言中，返回的tensor是numpy ndarray对象，在C和C++语言中，返回的tensor是tensorflow：：Tensor实例。TensorFlow 程序通常被组织成一个构建阶段和一个执行阶段。在构建阶段，op的执行步骤被描述成一个图。在执行阶段，使用会话执行执行图中的op。
+TensorFlow的命名来源于本身的运行原理。Tensor(张量)意味着N维数组，Flow(流)意味着基于数据流图的计算。TensorFlow就是一个是文件库，研究人员和计算机科学家能够借助这个文件库打造分析图像和语音等数据的系统，计算机在此类系统的帮助下，将能够自 行作出决定，从而变得更加智能。TensorFlow是一个非常灵活的框架，它能够运行在个人计算机或者服务器的单个或多个CPU和GPU上，甚至是移动设备上。可以用MNIST机器学习来分析TensorFlow的框架。首先，要构建一个计算的过程。MNIST所用到的算法核心就是softmax回归算法，这个算法就是通过对已知训练数据同个标签的像素加权平均，来构建出每个标签在不同像素点上的权值，若是这个像素点具有有利的证据说明这张图片不属于这类，那么相应的权值为负数，相反若是这个像素拥有有利的证据支持这张图片属于这个类，那么权值是正数。
+TensorFlow是谷歌的第二代开源的人工智能学习系统，是用来实现神经网络的内置框架学习软件库。
+        /n/n
+        目前，TensorFlow机器学习已经成为了一个研究热点. TensorFlow是一个编程系统，使用图来表示计算任务。图中的节点被称之为op(operation的缩写)。一个op获得 0个或多个Tensor，执行计算，产生0个或多个Tensor。每个Tensor是一个类型化的多维数组。例如，你可以将一小组图像集表示为一个四维浮点数数组，这四个维度分别是[batch， height，width，channels]。一个TensorFlow图描述了计算的过程。为了进行计算，图必须在会话里被启动。会话将图的op分发到诸如CPU或GPU之类的设备上，同时提供执行op 的方法。这些方法执行后, 将产生的tensor返回。在Python语言中，返回的tensor是numpy ndarray对象，在C和C++语言中，返回的tensor是tensorflow：：Tensor实例。TensorFlow 程序通常被组织成一个构建阶段和一个执行阶段。在构建阶段，op的执行步骤被描述成一个图。在执行阶段，使用会话执行执行图中的op。
+TensorFlow的命名来源于本身的运行原理。Tensor(张量)意味着N维数组，Flow(流)意味着基于数据流图的计算。TensorFlow就是一个是文件库，研究人员和计算机科学家能够借助这个文件库打造分析图像和语音等数据的系统，计算机在此类系统的帮助下，将能够自 行作出决定，从而变得更加智能。TensorFlow是一个非常灵活的框架，它能够运行在个人计算机或者服务器的单个或多个CPU和GPU上，甚至是移动设备上。可以用MNIST机器学习来分析TensorFlow的框架。首先，要构建一个计算的过程。MNIST所用到的算法核心就是softmax回归算法，这个算法就是通过对已知训练数据同个标签的像素加权平均，来构建出每个标签在不同像素点上的权值，若是这个像素点具有有利的证据说明这张图片不属于这类，那么相应的权值为负数，相反若是这个像素拥有有利的证据支持这张图片属于这个类，那么权值是正数。
+</string>
+    <string name="text2">这里不给出详细的推导过程，但是可以得到一个计算出一个图片对应每个标签的概率大小的计算方式，可以通过如下的代码来得到一个概率分布: y = softmax( Wx + b)(1)建立好一个算法模型之后，算法内输入的所有可操作的交互单元就像式(1)中的图片输入x，为了适应所有的图片输入，将其设置为变量占位符 placeholder。而像权重W和偏置值b这两个通过学习不断修改值的单元设置为变量Variable。
+TensorFlow在这一步就是在后台给描述计算的那张图里面增添一系列新的计算操作单元用来实现反向传播算法和梯度下降算法。它返回一个单一的操作，当运行这个操作时，可以用梯度下降算法来训练模型，微调变量，不断减少成本，从而建立好一个基本模型。
+建立好模型之后，创建一个会话(Session)，循环1000次，每次批处理100个数据，开始数据训练。TensorFlow通过数据输入(Feeds)将张量数据输入至模型中，而张量Tensor就像数据流一样流过每个计算节点，微调变量，使得模型更加准确。
+通过这个例子，可以管中窥豹了解TensorFlow的框架结构，TensorFlow对于输入的计算过程在后台描述成计算图，计算图建立好之后，创建会话Session来提交计算图，用Feed 输入训练的张量数据，TensorFlow通过在后台增加计算操作单元用于训练模型，微调数据，从而完成一个机器的学习任务。
+</string>
+    <string name="text3">TensorFlow的支持列表里没有Windows，而人们使用的计算机大都是安装的Windows 系统，虽然可以用Docker来实现在Windows上运行，但小问题很多，它支持得最好的还是基于UNIX内核的系统。
+在学习TensorFlow的过程中，读取数据这个模块的内容较为复杂且理解较难。Dataset API是TensorFlow中的一个全新的模块，主要服务于数据读取。语法上简洁易懂，此外想要应用TensorFlow的Eager模式就必须要使用Dataset API来完成读取数据工作。Iterator也就是迭代器模式，具体指的是，在不暴露对象的内部细节的情况下，提供一种访问容器对象中各元素的方法。在全面了解Dataset API中的两大基础类之后，就可以开始创建Dataset 工作，在创建复杂Dataset的时候，可以将Dataset看做是类型相同的“元素”有序列表，在实际应用过程中，可以是向量、字符串、图片等。一个Dataset能够通过Transformation变成一个新的Dataset，并且通过Transformation完成数据的变换、打乱工作，组成新的batch 和epoch，继而进行一系列操作，Transformation中具体包括了map、batcshuffle、repeat 等，这些元素变换方式各不相同。TensorFlow全新的数据读取方法有两种模式，在非Eager 模式下，创建Iterator的方法还有另外三种更为复杂的Iterator，三种方法的功能不同。
+以数字为例，如果在Dataset中的每一个元素所对应的数据都是一个数字的话，那么在完成相应的编程语言后，就可以说创建了一个dataset，上述代码中包含了5个元素，此时 只是将数据引入，还需要完成元素的取出工作，也就是要从dataset中将Iterator示例化，然后将Iterator进行迭代。此处，可以分为两种不同的模式，分别为非Eager和Eager模式，两种模式中读取dataset中元素的方法不同，整体编程语言也各不相同。值得注意的是，在非Eager模式下，dataset中的元素读取结束后，再次尝试sess.run（one_element），就会引发异常，因此在实际的编程过程中，可以利用这个异常判断数据是否读取结束。除了上文中的方法外Dataset还有其他三种创建方法，三种创建方法各不相同，使用的方法上也有着明 显的差别。
+综上所述，Dataset API能够同时兼容传统TensorFlow中读取数据的方式,并且随着 Dataset API的完善和发展，将会成为TensorFlow中的主流读取数据模式，而且在非Eager 模式下，Dataset中读取出来的元素会对应着batch中的Tensor，而在 Eager 模式下，Dataset 建立 Iterator的方式存在着明显的区别，此时读取出来的数据就是含有值的Tensor，更加便于程序人员调试。
+</string>
+    <string name="textview">TextView</string>
+</resources>

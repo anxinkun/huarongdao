@@ -1,0 +1,115 @@
+<!--
+  Copyright 2018 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources>
+    <string name="app_name">Material Me!</string>
+    <string name="title_placeholder">Title</string>
+    <string name="news_placeholder">News</string>
+    <string name="sports_info_placeholder">Here is some news</string>
+
+    <string-array name="sports_titles">
+        <item>Baseball</item>
+        <item>Badminton</item>
+        <item>Basketball</item>
+        <item>Bowling</item>
+        <item>Cycling</item>
+        <item>Golf</item>
+        <item>Running</item>
+        <item>Soccer</item>
+        <item>Swimming</item>
+        <item>Table Tennis</item>
+        <item>Tennis</item>
+    </string-array>
+
+    <string-array name="sports_info">
+        <item>Here is some Baseball news!</item>
+        <item>Here is some Badminton news!</item>
+        <item>Here is some Basketball news!</item>
+        <item>Here is some Bowling news!</item>
+        <item>Here is some Cycling news!</item>
+        <item>Here is some Golf news!</item>
+        <item>Here is some Running news!</item>
+        <item>Here is some Soccer news!</item>
+        <item>Here is some Swimming news!</item>
+        <item>Here is some Table Tennis news!</item>
+        <item>Here is some Tennis news!</item>
+    </string-array>
+
+    <array name="sports_images">
+        <item>@drawable/img_baseball</item>
+        <item>@drawable/img_badminton</item>
+        <item>@drawable/img_basketball</item>
+        <item>@drawable/img_bowling</item>
+        <item>@drawable/img_cycling</item>
+        <item>@drawable/img_golf</item>
+        <item>@drawable/img_running</item>
+        <item>@drawable/img_soccer</item>
+        <item>@drawable/img_swimming</item>
+        <item>@drawable/img_tabletennis</item>
+        <item>@drawable/img_tennis</item>
+    </array>
+
+    <string-array name="subtitle_detail_concrete_text">
+        <item>I love baseball. Sometimes I go to park with my father. And I love it forever!</item>
+        <item>Create an app with four images arranged in a grid in the center of your layout. Make the first three solid colored backgrounds with different shapes (square, circle, line), and the fourth the Android Material Design Icon. Make each of these images respond to clicks as follows
+        </item>
+        <item>
+            One of the colored blocks relaunches the Activity using the Explode animation for both the enter and exit transitions.
+        </item>
+        <item>
+            Relaunch the Activity from another colored block, this time using the Fade transition.
+            Touching the third colored block starts an in-place animation of the View (such as a rotation).
+        </item>
+        <item>
+            Finally, touching the Android icon starts a secondary Activity with
+            a Shared Element Transition swapping the Android block with one of the other blocks.
+        </item>
+        <item>
+            One of the principles behind Material Design is using consistent elements across applications and platforms so that users recognize patterns and know how to use them.
+        </item>
+        <item>
+            You have already used one such element: the Floating Action Button (FAB). The FAB is a circular button that floats above the rest of the UI.
+        </item>
+        <item>
+            It is used to promote a particular action to the user, one that is very likely to be used in a given activity. In this task, you will create a FAB that resets the dataset to its original state.
+        </item>
+        <item>
+            Open the build.gradle (Module: app) file and add the following line of code for the design support library in the dependencies section
+        </item>
+        <item>
+            Because the Activity is destroyed and recreated when the configuration changes, rotating the device resets the data in this implementation. In order for the changes to be persistent
+        </item>
+        <item>
+            An accent color. A color that contrasts well with the primary color. This is used for various highlights, but it is also the default color of the FAB.
+        </item>
+        <item>
+            When you ran your app, you may have noticed that the FAB color and app bar color are already set. In this task you will learn where these colors are set. You can use the Material Color Guide to pick some colors to experiment with.
+        </item>
+        <item>
+            Pick a color from the Material Color Guide to use as your primary color, such as #607D8B (in the Blue Grey color swatch). It should be within the 300-700 range of the color swatch so that you can still pick a proper accent and dark color.
+        </item>
+        <item>
+            Pick an accent color for your FAB from the colors whose values start with an A, and whose color contrasts well with the primary color (like Deep Orange A200). Change the colorAccent value in colors.xml to match.
+        </item>
+    </string-array>
+
+    <string name="subtitle_detail_text">Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Praesent ultrices congue rutrum.
+        Phasellus elementum ipsum ac convallis aliquam. Suspendisse eleifend
+        eros a enim faucibus mollis. Nunc placerat, est vitae vestibulum
+        blandit, dolor diam fringilla tellus, eu euismod mauris neque
+        at neque.</string>
+
+</resources>

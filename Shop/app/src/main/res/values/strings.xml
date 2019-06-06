@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Shop</string>
+    <string name="apple">apple</string>
+    <string name="banana">banana</string>
+    <string name="orange">orange</string>
+    <string name="rice">rice</string>
+    <string name="juice">juice</string>
+    <string name="milk">milk</string>
+    <string name="cheese">cheese</string>
+    <string name="bread">bread</string>
+    <string name="fork">fork</string>
+    <string name="textview">TextView</string>
+    <string name="name">Name</string>
+    <string name="locate">locate</string>
+    <string name="additem">ADDitem</string>
+</resources>
